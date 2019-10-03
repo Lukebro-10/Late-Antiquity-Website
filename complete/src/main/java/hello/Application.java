@@ -18,9 +18,8 @@ public class Application {
     @Bean
     public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
         return args -> {
-            System.out.println("Website up and running!");
-            }
 
+            System.out.println("Running the server!");
         };
     }
 
