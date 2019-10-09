@@ -44,59 +44,89 @@ export const navItems: NavData[] = [
     name: 'Rome'
   },
   {
-    name: 'The Late Empire',
+    name: 'The Old Empire',
     url: '/theme/colors',
     icon: 'icon-star'
   },
   {
     name: 'Western Empire',
-    url: '/base',
+    url: '/rome_west',
     icon: 'icon-star',
     children: [
       {
-        name: 'Cards',
-        url: '/base/cards',
+        name: 'Constans I (337-350)',
+        url: '/rome_east/re_pg1',
         icon: 'icon-puzzle'
       },
       {
-        name: 'Carousels',
+        name: 'Re-unified Empire (350-375)',
         url: '/base/carousels',
         icon: 'icon-puzzle'
       },
       {
-        name: 'Collapses',
+        name: 'East-West Conflict (375-395)',
         url: '/base/collapses',
         icon: 'icon-puzzle'
       },
       {
-        name: 'Tooltips',
+        name: 'Honorius (395-423)',
         url: '/base/tooltips',
+        icon: 'icon-puzzle'
+      },
+      {
+        name: 'Valentinian III (423-455)',
+        url: '/base/collapses',
+        icon: 'icon-puzzle'
+      },
+      {
+        name: 'Final Collapse (455-476)',
+        url: '/base/collapses',
         icon: 'icon-puzzle'
       }
     ]
   },
   {
     name: 'Eastern Empire',
-    url: '/base',
+    url: '/rome_east',
     icon: 'icon-star',
     children: [
       {
-        name: 'Cards',
-        url: '/base/cards',
+        name: 'Constantius II(334-361)',
+        url: '/rome_east/re_pg1',
         icon: 'icon-puzzle'
       },
       {
-        name: 'Carousels',
+        name: 'Valentinian dynasty (361-379)',
         url: '/base/carousels',
         icon: 'icon-puzzle'
       },
       {
-        name: 'Collapses',
+        name: 'Theodosius I (379-395)',
         url: '/base/collapses',
         icon: 'icon-puzzle'
       },
       {
-        name: 'Forms',
+        name: 'Arcadius & Pulcheria (395-421)',
+        url: '/base/forms',
+        icon: 'icon-puzzle'
+      },
+      {
+        name: 'Theodosius II (421-450)',
+        url: '/base/forms',
+        icon: 'icon-puzzle'
+      },
+      {
+        name: 'Early Leonid dynasty (450-474)',
+        url: '/base/forms',
+        icon: 'icon-puzzle'
+      },
+      {
+        name: 'Zeno (474-491)',
+        url: '/base/forms',
+        icon: 'icon-puzzle'
+      },
+      {
+        name: 'Rise of the Justinian dynasty (491-527)',
         url: '/base/forms',
         icon: 'icon-puzzle'
       },
