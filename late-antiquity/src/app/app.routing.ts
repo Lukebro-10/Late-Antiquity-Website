@@ -82,10 +82,10 @@ export const routes: Routes = [
         path: 'rome_east',
         loadChildren: () => import('./views/rome_east/re.module').then(m => m.REModule)
       },
-      // {
-      //   path: 'rome_west',
-      //   loadChildren: () => import('./views/rome_west/rw.module').then(m => m.BaseModule)
-      // },
+      {
+        path: 'rome_west',
+        loadChildren: () => import('./views/rome_west/rw.module').then(m => m.RWModule)
+      },
       {
         path: 'widgets',
         loadChildren: () => import('./views/widgets/widgets.module').then(m => m.WidgetsModule)

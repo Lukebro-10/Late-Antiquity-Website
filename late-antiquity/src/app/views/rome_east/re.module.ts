@@ -1,43 +1,23 @@
 // Angular
 import { CommonModule } from '@angular/common';
-// import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
-import { RE_RoutingModule } from './re-routing.module';
-
-//Constantius I
+//Constantius I (337-350)
 import { RE_PG1_Component } from './re_pg1.component';
-
-// import { RE_PG2_Component } from './re_pg2.component';
-//
-// import { RE_PG3_Component } from './re_pg3.component';
-//
-// import { RE_PG4_Component } from './re_pg4.component';
-
-// // Forms Component
-// import { FormsComponent } from './forms.component';
-//
-// import { SwitchesComponent } from './switches.component';
-// import { TablesComponent } from './tables.component';
-//
-// // Tabs Component
-// import { TabsModule } from 'ngx-bootstrap/tabs';
-// import { TabsComponent } from './tabs.component';
-//
-// // Carousel Component
-// import { CarouselModule } from 'ngx-bootstrap/carousel';
-// import { CarouselsComponent } from './carousels.component';
-//
-// // Collapse Component
-// import { CollapseModule } from 'ngx-bootstrap/collapse';
-// import { CollapsesComponent } from './collapses.component';
-//
-// // Dropdowns Component
-// import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
-//
-// // Pagination Component
-// import { PaginationModule } from 'ngx-bootstrap/pagination';
-// import { PopoversComponent } from './popovers.component';
+//Valentian Dynasty (361-379)
+import { RE_PG2_Component } from './re_pg2.component';
+//Theodosius I (379-395)
+import { RE_PG3_Component } from './re_pg3.component';
+//Arcadius and Pulcheria (395-421)
+import { RE_PG4_Component } from './re_pg4.component';
+//Theodosius II (421-450)
+import { RE_PG5_Component } from './re_pg5.component';
+//Early Leonid Dynasty (450-474)
+import { RE_PG6_Component } from './re_pg6.component';
+//Zeno (474-491)
+import { RE_PG7_Component } from './re_pg7.component';
+//Rise of the Justinians (491-527)
+import { RE_PG8_Component } from './re_pg8.component';
 
 // Components Routing
 import { RE_RoutingModule } from './re-routing.module';
@@ -48,10 +28,14 @@ import { RE_RoutingModule } from './re-routing.module';
     RE_RoutingModule
   ],
   declarations: [
-    RE_PG1_Component
-    // RE_PG2_Component,
-    // RE_PG3_Component,
-    // RE_PG4_Component
+    RE_PG1_Component,
+    RE_PG2_Component,
+    RE_PG3_Component,
+    RE_PG4_Component,
+    RE_PG5_Component,
+    RE_PG6_Component,
+    RE_PG7_Component,
+    RE_PG8_Component
   ]
 })
 export class REModule { }

@@ -55,32 +55,32 @@ export const navItems: NavData[] = [
     children: [
       {
         name: 'Constans I (337-350)',
-        url: '/rome_east/re_pg1',
+        url: '/rome_west/rw_pg1',
         icon: 'icon-puzzle'
       },
       {
         name: 'Re-unified Empire (350-375)',
-        url: '/base/carousels',
+        url: '/rome_west/rw_pg2',
         icon: 'icon-puzzle'
       },
       {
         name: 'East-West Conflict (375-395)',
-        url: '/base/collapses',
+        url: '/rome_west/rw_pg3',
         icon: 'icon-puzzle'
       },
       {
         name: 'Honorius (395-423)',
-        url: '/base/tooltips',
+        url: '/rome_west/rw_pg4',
         icon: 'icon-puzzle'
       },
       {
         name: 'Valentinian III (423-455)',
-        url: '/base/collapses',
+        url: '/rome_west/rw_pg5',
         icon: 'icon-puzzle'
       },
       {
         name: 'Final Collapse (455-476)',
-        url: '/base/collapses',
+        url: '/rome_west/rw_pg6',
         icon: 'icon-puzzle'
       }
     ]
@@ -97,37 +97,37 @@ export const navItems: NavData[] = [
       },
       {
         name: 'Valentinian dynasty (361-379)',
-        url: '/base/carousels',
+        url: '/rome_east/re_pg2',
         icon: 'icon-puzzle'
       },
       {
         name: 'Theodosius I (379-395)',
-        url: '/base/collapses',
+        url: '/rome_east/re_pg3',
         icon: 'icon-puzzle'
       },
       {
         name: 'Arcadius & Pulcheria (395-421)',
-        url: '/base/forms',
+        url: '/rome_east/re_pg4',
         icon: 'icon-puzzle'
       },
       {
         name: 'Theodosius II (421-450)',
-        url: '/base/forms',
+        url: '/rome_east/re_pg5',
         icon: 'icon-puzzle'
       },
       {
         name: 'Early Leonid dynasty (450-474)',
-        url: '/base/forms',
+        url: '/rome_east/re_pg6',
         icon: 'icon-puzzle'
       },
       {
         name: 'Zeno (474-491)',
-        url: '/base/forms',
+        url: '/rome_east/re_pg7',
         icon: 'icon-puzzle'
       },
       {
         name: 'Rise of the Justinian dynasty (491-527)',
-        url: '/base/forms',
+        url: '/rome_east/re_pg8',
         icon: 'icon-puzzle'
       },
     ]
