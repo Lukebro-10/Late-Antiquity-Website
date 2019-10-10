@@ -45,7 +45,7 @@ export const navItems: NavData[] = [
   },
   {
     name: 'The Old Empire',
-    url: '/theme/colors',
+    url: '/rome_old',
     icon: 'icon-star'
   },
   {

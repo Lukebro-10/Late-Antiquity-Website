@@ -1,11 +1,12 @@
-<app-header
+<!-- Top navbar -->
+<app-header style="background-image: linear-gradient(to right, #cc2222, #222222);"
   [navbarBrandRouterLink]="['/dashboard']"
   [fixed]="true"
   [navbarBrandFull]="{src: 'assets/img/brand/logo.svg', width: 89, height: 25, alt: 'CoreUI Logo'}"
   [navbarBrandMinimized]="{src: 'assets/img/brand/sygnet.svg', width: 30, height: 30, alt: 'CoreUI Logo'}"
   [sidebarToggler]="'lg'"
   [asideMenuToggler]="'lg'">
-  <ul class="nav navbar-nav d-md-down-none">
+  <ul class="nav navbar-nav d-md-down-none" >
     <li class="nav-item px-3">
       <a class="nav-link" href="#">Dashboard</a>
     </li>
@@ -18,10 +19,11 @@
   </ul>
   <ul class="nav navbar-nav ml-auto">
   </ul>
-
 </app-header>
+
 <div class="app-body">
-  <app-sidebar [fixed]="true" [display]="'lg'">
+  <!-- Left Sidebar -->
+  <app-sidebar [fixed]="true" [display]="'lg'" style="background-image: linear-gradient(to bottom right, #cc2222, #222222);">
     <app-sidebar-nav [navItems]="navItems" [perfectScrollbar] [disabled]="sidebarMinimized"></app-sidebar-nav>
     <app-sidebar-minimizer></app-sidebar-minimizer>
   </app-sidebar>
@@ -29,8 +31,9 @@
   <main class="main">
     <!-- Breadcrumb -->
     <!-- breaking change 'cui-breadcrumb' -->
+
+    <!-- Breadcrumb Menu-->
     <cui-breadcrumb>
-      <!-- Breadcrumb Menu-->
       <li class="breadcrumb-menu d-md-down-none">
         <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
           <a class="btn" href="#"><i class="icon-speech"></i></a>
@@ -39,6 +42,7 @@
         </div>
       </li>
     </cui-breadcrumb>
+
     <!-- deprecation warning for 'app-breadcrumb' -->
     <!--<ol class="breadcrumb">-->
       <!--<app-breadcrumb></app-breadcrumb>-->
@@ -50,7 +54,7 @@
           <!--<a class="btn" href="#"><i class="icon-settings"></i> &nbsp;Settings</a>-->
         <!--</div>-->
       <!--</li>-->
-    <!--</ol>-->
+    <!--</ol> -->
     <div class="container-fluid">
       <router-outlet></router-outlet>
     </div><!-- /.container-fluid -->
@@ -138,18 +142,6 @@
               <div class="avatar avatar-xs">
                 <img class="img-avatar" src="assets/img/avatars/4.jpg" alt="admin@bootstrapmaster.com">
               </div>
-              <div class="avatar avatar-xs">
-                <img class="img-avatar" src="assets/img/avatars/5.jpg" alt="admin@bootstrapmaster.com">
-              </div>
-              <div class="avatar avatar-xs">
-                <img class="img-avatar" src="assets/img/avatars/6.jpg" alt="admin@bootstrapmaster.com">
-              </div>
-              <div class="avatar avatar-xs">
-                <img class="img-avatar" src="assets/img/avatars/7.jpg" alt="admin@bootstrapmaster.com">
-              </div>
-              <div class="avatar avatar-xs">
-                <img class="img-avatar" src="assets/img/avatars/8.jpg" alt="admin@bootstrapmaster.com">
-              </div>
             </div>
           </div>
         </div>
@@ -163,6 +155,8 @@
     </tabset>
   </app-aside>
 </div>
+
+<!-- Footer -->
 <app-footer>
   <span><a href="https://coreui.io">CoreUI</a> &copy; 2019 Luke Brown</span>
   <span class="ml-auto">Powered by <a href="https://coreui.io/angular">CoreUI for Angular</a></span>

@@ -6,8 +6,6 @@ import { DefaultLayoutComponent } from './containers';
 
 import { P404Component } from './views/error/404.component';
 import { P500Component } from './views/error/500.component';
-import { LoginComponent } from './views/login/login.component';
-import { RegisterComponent } from './views/register/register.component';
 
 export const routes: Routes = [
   {
@@ -30,20 +28,6 @@ export const routes: Routes = [
     }
   },
   {
-    path: 'login',
-    component: LoginComponent,
-    data: {
-      title: 'Login Page'
-    }
-  },
-  {
-    path: 'register',
-    component: RegisterComponent,
-    data: {
-      title: 'Register Page'
-    }
-  },
-  {
     path: '',
     component: DefaultLayoutComponent,
     data: {
@@ -53,14 +37,6 @@ export const routes: Routes = [
       {
         path: 'base',
         loadChildren: () => import('./views/base/base.module').then(m => m.BaseModule)
-      },
-      {
-        path: 'buttons',
-        loadChildren: () => import('./views/buttons/buttons.module').then(m => m.ButtonsModule)
-      },
-      {
-        path: 'charts',
-        loadChildren: () => import('./views/chartjs/chartjs.module').then(m => m.ChartJSModule)
       },
       {
         path: 'dashboard',
@@ -75,8 +51,8 @@ export const routes: Routes = [
         loadChildren: () => import('./views/notifications/notifications.module').then(m => m.NotificationsModule)
       },
       {
-        path: 'theme',
-        loadChildren: () => import('./views/theme/theme.module').then(m => m.ThemeModule)
+        path: 'rome_old',
+        loadChildren: () => import('./views/rome_old/rome-old.module').then(m => m.RomeOldModule)
       },
       {
         path: 'rome_east',
@@ -86,10 +62,6 @@ export const routes: Routes = [
         path: 'rome_west',
         loadChildren: () => import('./views/rome_west/rw.module').then(m => m.RWModule)
       },
-      {
-        path: 'widgets',
-        loadChildren: () => import('./views/widgets/widgets.module').then(m => m.WidgetsModule)
-      }
     ]
   },
   { path: '**', component: P404Component }

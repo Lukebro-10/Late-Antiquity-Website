@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  templateUrl: 'brand-buttons.component.html'
+  templateUrl: 'rome_old.component.html'
 })
-export class BrandButtonsComponent {
+export class RomeOldComponent {
 
   constructor() { }
 
