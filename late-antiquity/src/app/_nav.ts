@@ -46,7 +46,34 @@ export const navItems: NavData[] = [
   {
     name: 'The Old Empire',
     url: '/rome_old',
-    icon: 'icon-star'
+    icon: 'icon-star',
+    children: [
+      {
+        name: 'Political History',
+        url: '/rome_old',
+        icon: 'icon-puzzle'
+      },
+      {
+        name: 'Provincial History',
+        url: '/rome_old',
+        icon: 'icon-puzzle'
+      },
+      {
+        name: 'Economic History',
+        url: '/rome_old',
+        icon: 'icon-puzzle'
+      },
+      {
+        name: 'Social History',
+        url: '/rome_old',
+        icon: 'icon-puzzle'
+      },
+      {
+        name: 'Religious History',
+        url: '/rome_old',
+        icon: 'icon-puzzle'
+      },
+    ]
   },
   {
     name: 'Western Empire',
