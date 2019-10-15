@@ -3,17 +3,18 @@ import { DOCUMENT } from '@angular/common';
 import { navItems } from '../../_nav';
 import { Router, NavigationEnd } from '@angular/router'
 
+import * as $ from 'jquery/dist/jquery.min.js';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './default-layout.component.html'
 })
-export class DefaultLayoutComponent implements OnDestroy implements OnInit{
+export class DefaultLayoutComponent implements OnDestroy, OnInit{
   public navItems = navItems;
   public sidebarMinimized = true;
   private changes: MutationObserver;
   public element: HTMLElement;
-  constructor(@Inject(DOCUMENT) _document?: any, private router: Router) {
+  constructor(private router: Router, @Inject(DOCUMENT) _document?: any) {
 
     this.changes = new MutationObserver((mutations) => {
       this.sidebarMinimized = _document.body.classList.contains('sidebar-minimized');
@@ -24,23 +25,32 @@ export class DefaultLayoutComponent implements OnDestroy implements OnInit{
       attributeFilter: ['class']
     });
 
-    //Change Navbar styling based upon page section selected.
-    router.events.subscribe(e => {
-          if(e instanceof NavigationEnd) {
-            if(this.router.url === '/' || this.router.url === '/dashboard') {
-              console.log("I am home")
-            }else if(this.router.url.includes('/rome_west')) {
-              console.log("I am red")
-            }else if(this.router.url.includes('/rome_east')) {
-              console.log("I am purple")
-            }else if(this.router.url.includes('/rome_old')) {
-              console.log("I am gold")
-            }else {
-              console.log("wrong")
+    }
+
+    ngOnInit(){
+      //Change Navbar styling based upon page section selected.
+      this.router.events.subscribe(e => {
+            if(e instanceof NavigationEnd) {
+              if(this.router.url === '/' || this.router.url === '/dashboard') {
+                $("app-header").css("background-image", "linear-gradient(to right, #aaaaaa , #222222)");
+                $("app-sidebar").css("background-image", "linear-gradient(to bottom right, #aaaaaa , #222222)");
+              }else if(this.router.url.includes('/rome_old')) {
+                $("app-header").css("background-image", "linear-gradient(to right, #ee1111 , #884422)");
+                $("app-sidebar").css("background-image", "linear-gradient(to bottom right, #ee1111 , #884422)");
+              }else if(this.router.url.includes('/rome_west')) {
+                $("app-header").css("background-image", "linear-gradient(to right, #cc2222 , #222222)");
+                $("app-sidebar").css("background-image", "linear-gradient(to bottom right, #cc2222 , #222222)");
+              }else if(this.router.url.includes('/rome_east')) {
+                $("app-header").css("background-image", "linear-gradient(to right, #cc22aa , #222222)");
+                $("app-sidebar").css("background-image", "linear-gradient(to bottom right, #cc22aa , #222222)");
+              }else {
+                $("app-header").css("background-background", "white");
+                $("app-sidebar").css("background-background", "white");
+                console.log("wrong");
+              }
             }
-          }
-        });
-  }
+          });
+    }
 
   ngOnDestroy(): void {
     this.changes.disconnect();

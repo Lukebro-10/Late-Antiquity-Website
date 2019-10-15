@@ -1,5 +1,5 @@
 <!-- Top navbar -->
-<app-header style="background-image: linear-gradient(to right, #cc2222, #222222);"
+<app-header
   [navbarBrandRouterLink]="['/dashboard']"
   [fixed]="true"
   [navbarBrandFull]="{src: 'assets/img/brand/logo.svg', width: 89, height: 25, alt: 'CoreUI Logo'}"
@@ -23,7 +23,7 @@
 
 <div class="app-body">
   <!-- Left Sidebar -->
-  <app-sidebar [fixed]="true" [display]="'lg'" style="background-image: linear-gradient(to bottom right, #cc2222, #222222);">
+  <app-sidebar [fixed]="true" [display]="'lg'" >
     <app-sidebar-nav [navItems]="navItems" [perfectScrollbar] [disabled]="sidebarMinimized"></app-sidebar-nav>
     <app-sidebar-minimizer></app-sidebar-minimizer>
   </app-sidebar>

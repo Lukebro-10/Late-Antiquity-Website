@@ -201,16 +201,6 @@ export const navItems: NavData[] = [
     icon: 'icon-star',
     children: [
       {
-        name: 'Login',
-        url: '/login',
-        icon: 'icon-star'
-      },
-      {
-        name: 'Register',
-        url: '/register',
-        icon: 'icon-star'
-      },
-      {
         name: 'Error 404',
         url: '/404',
         icon: 'icon-star'
