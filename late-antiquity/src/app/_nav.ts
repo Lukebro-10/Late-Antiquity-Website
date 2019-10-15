@@ -50,27 +50,27 @@ export const navItems: NavData[] = [
     children: [
       {
         name: 'Political History',
-        url: '/rome_old',
+        url: '/rome_old/rome_politics',
         icon: 'icon-puzzle'
       },
       {
         name: 'Provincial History',
-        url: '/rome_old',
+        url: '/rome_old/rome_provinces',
         icon: 'icon-puzzle'
       },
       {
         name: 'Economic History',
-        url: '/rome_old',
+        url: '/rome_old/rome_economy',
         icon: 'icon-puzzle'
       },
       {
         name: 'Social History',
-        url: '/rome_old',
+        url: '/rome_old/rome_social',
         icon: 'icon-puzzle'
       },
       {
         name: 'Religious History',
-        url: '/rome_old',
+        url: '/rome_old/rome_religion',
         icon: 'icon-puzzle'
       },
     ]

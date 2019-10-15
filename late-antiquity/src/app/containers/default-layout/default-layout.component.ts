@@ -35,8 +35,8 @@ export class DefaultLayoutComponent implements OnDestroy, OnInit{
                 $("app-header").css("background-image", "linear-gradient(to right, #aaaaaa , #222222)");
                 $("app-sidebar").css("background-image", "linear-gradient(to bottom right, #aaaaaa , #222222)");
               }else if(this.router.url.includes('/rome_old')) {
-                $("app-header").css("background-image", "linear-gradient(to right, #ee1111 , #884422)");
-                $("app-sidebar").css("background-image", "linear-gradient(to bottom right, #ee1111 , #884422)");
+                $("app-header").css("background-image", "linear-gradient(to right, #ccaa44,  #222222)");
+                $("app-sidebar").css("background-image", "linear-gradient(to bottom right, #ccaa44, #222222)");
               }else if(this.router.url.includes('/rome_west')) {
                 $("app-header").css("background-image", "linear-gradient(to right, #cc2222 , #222222)");
                 $("app-sidebar").css("background-image", "linear-gradient(to bottom right, #cc2222 , #222222)");

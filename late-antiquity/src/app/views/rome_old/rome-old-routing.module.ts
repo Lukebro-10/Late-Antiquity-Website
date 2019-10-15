@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { RomeOldComponent } from './rome_old.component';
+import { RomePoliticsComponent } from './rome_politics.component';
 import { RomeEconomyComponent } from './rome_economy.component';
 import { RomeProvincesComponent } from './rome_provinces.component';
 import { RomeReligionComponent } from './rome_religion.component';
@@ -10,20 +10,19 @@ import { RomeSocialComponent } from './rome_social.component';
 const routes: Routes = [
   {
     path: '',
-    component: RomeOldComponent,
     data: {
       title: 'RomeOld'
     },
     children: [
       {
         path: '',
-        redirectTo: 'rw_pg1'
+        redirectTo: 'rome_politics'
       },
       {
         path: 'rome_politics',
-        component: RomeOldComponent,
+        component: RomePoliticsComponent,
         data: {
-          title: 'RomeOldComponent'
+          title: 'RomePoliticsComponent'
         }
       },
       {
