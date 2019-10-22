@@ -1,9 +1,136 @@
 <div class="animated fadeIn">
-  <div class="row">
     <div>
       <h3>Economy</h3>
       <!-- Nav tabs -->
     </div>
+    <div class="card">
+        <div class="card-header">
+          Roman Coins
+        </div>
+        <div class="card-body">
+          <div class="chart-wrapper">
+            <h4 style="text-align: center">AUGUSTAN CURRENCY SYSTEM</h4>
+            <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Denomination</th>
+                <th>Metal</th>
+                <th>Weight</th>
+                <th>Value (In Denarii)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Aureus</td>
+                <td>Gold</td>
+                <td>7.90 grs.</td>
+                <td>
+                  <span class="badge badge-secondary">25</span>
 
-  </div><!--/.row-->
+                </td>
+              </tr>
+              <tr>
+                <td>Quinarius</td>
+                <td>Gold</td>
+                <td>3.80 grs.</td>
+                <td>
+                  <span class="badge badge-secondary">12-1/2</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Denarius</td>
+                <td>Silver</td>
+                <td>3.80 grs.</td>
+                <td>
+                  <span class="badge badge-secondary">1</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Quinarius</td>
+                <td>Silver</td>
+                <td>1.90 grs.</td>
+                <td>
+                  <span class="badge badge-secondary">1/2</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Sestertius</td>
+                <td>Orichalcum</td>
+                <td>25.00 grs.</td>
+                <td>
+                  <span class="badge badge-secondary">1/4</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Dupondius</td>
+                <td>Orichalcum</td>
+                <td>12.50 grs.</td>
+                <td>
+                  <span class="badge badge-secondary">1/8</span>
+                </td>
+              </tr>
+              <tr>
+                <td>As</td>
+                <td>Copper</td>
+                <td>11.00 grs.</td>
+                <td>
+                  <span class="badge badge-secondary">1/16</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Semis*</td>
+                <td>Orichalcum</td>
+                <td>3.25 grs.</td>
+                <td>
+                  <span class="badge badge-secondary">1/32</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Quadrans</td>
+                <td>Copper</td>
+                <td>3.00 grs.</td>
+                <td>
+                  <span class="badge badge-secondary">1/64</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          *Denomination introduced by Nero, 64-68 A.D.
+          </div>
+        </div>
+      </div>
+
+    <div class="card">
+        <div class="card-header">
+          Debasement
+        </div>
+        <div class="card-body">
+          The Denarius lost silver over time. <br/>
+          <br>
+          <div class="chart-wrapper">
+            <h4 style="text-align: center">Percentage silver content in the Denarius by year</h4>
+            <canvas baseChart class="chart"
+            [datasets]="DenariusChartData1"
+            [labels]="DenariusChartLabels1"
+            [options]="DenariusChartOptions"
+            [colors]="DenariusChartColours"
+            [legend]="DenariusChartLegend"
+            [chartType]="DenariusChartType"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)"></canvas>
+
+            <h4 style="text-align: center">Percentage silver content in the Denarius by year</h4>
+            <canvas baseChart class="chart"
+            [datasets]="DenariusChartData2"
+            [labels]="DenariusChartLabels2"
+            [options]="DenariusChartOptions"
+            [colors]="DenariusChartColours"
+            [legend]="DenariusChartLegend"
+            [chartType]="DenariusChartType"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)"></canvas>
+          </div>
+        </div>
+      </div>
+      Data from <a href="https://web.archive.org/web/20151128174101/http://www.tulane.edu/~august/handouts/601cprin.htm">tulane.edu</a>
 </div>

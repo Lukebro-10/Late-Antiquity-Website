@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { ChartsModule } from 'ng2-charts';
 
 import { TabsModule } from 'ngx-bootstrap/tabs';
 
@@ -12,7 +13,8 @@ import { RomeOldRoutingModule } from './rome-old-routing.module';
 
 @NgModule({
   imports: [ RomeOldRoutingModule,
-  TabsModule
+  TabsModule,
+  ChartsModule
  ],
   declarations: [ RomePoliticsComponent,
     RomeEconomyComponent,

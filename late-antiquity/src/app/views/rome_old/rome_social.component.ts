@@ -11,17 +11,26 @@ export class RomeSocialComponent implements OnInit{
     var treeData =
       {
         "name": "Top Level",
+        "value": 20,
         "children": [
           {
             "name": "Level 2: A",
+            "value": 10,
             "children": [
-              { "name": "Son of A" },
-              { "name": "Daughter of A" }
+              { "name": "Son of A",
+              "value": 5 },
+              { "name": "Daughter of A",
+              "value": 5 }
             ]
           },
-          { "name": "Level 2: B" }
+          { "name": "Level 2: B",
+          "value": 10
+          }
         ]
       };
+
+    var filledNodeColor = "#2222dd";
+    var emptyNodeColor = "#dd2222";
 
     // Set the dimensions and margins of the diagram
     var margin = {top: 20, right: 90, bottom: 30, left: 90},
@@ -34,7 +43,7 @@ export class RomeSocialComponent implements OnInit{
     var svg = d3.select("span").append("svg")
         .attr("width", width + margin.right + margin.left)
         .attr("height", height + margin.top + margin.bottom)
-      .append("g")
+        .append("g")
         .attr("transform", "translate("
               + margin.left + "," + margin.top + ")");
 
@@ -94,16 +103,20 @@ export class RomeSocialComponent implements OnInit{
       // Add Circle for the nodes
       nodeEnter.append('circle')
           .attr('class', 'node')
-          .attr('r', 1e-6)
+          .attr("r", function(d) { return d.value; })
+          .style("stroke", function(d) { return emptyNodeColor; })
           .style("fill", function(d) {
-              return d._children ? "lightsteelblue" : "#fff";
+            // alert(d.name);
+            return d._children ? filledNodeColor : emptyNodeColor;
           });
 
       // Add labels for the nodes
       nodeEnter.append('text')
           .attr("dy", ".35em")
           .attr("x", function(d) {
-              return d.children || d._children ? -13 : 13;
+              var lowVal = (d.value + 4) * -1;
+              var highVal = (d.value + 4);
+              return d.children || d._children ? lowVal : highVal;
           })
           .attr("text-anchor", function(d) {
               return d.children || d._children ? "end" : "start";
@@ -122,9 +135,10 @@ export class RomeSocialComponent implements OnInit{
 
       // Update the node attributes and style
       nodeUpdate.select('circle.node')
-        .attr('r', 10)
+        .attr('r', function(d) { return d.value; })
+        .style("stroke", function(d) { return emptyNodeColor; })
         .style("fill", function(d) {
-            return d._children ? "lightsteelblue" : "#fff";
+            return d._children ? filledNodeColor : emptyNodeColor;
         })
         .attr('cursor', 'pointer');
 
@@ -151,6 +165,7 @@ export class RomeSocialComponent implements OnInit{
       var link = svg.selectAll('path.link')
           .data(links, function(d) { return d.id; });
 
+
       // Enter any new links at the parent's previous position.
       var linkEnter = link.enter().insert('path', "g")
           .attr("class", "link")
@@ -165,6 +180,9 @@ export class RomeSocialComponent implements OnInit{
       // Transition back to the parent element position
       linkUpdate.transition()
           .duration(duration)
+          .style('fill', 'none')
+          .style('stroke', '#ccc')
+          .style('stroke-width', '2px')
           .attr('d', function(d){ return diagonal(d, d.parent) });
 
       // Remove any exiting links
@@ -185,10 +203,11 @@ export class RomeSocialComponent implements OnInit{
       // Creates a curved (diagonal) path from parent to the child nodes
       function diagonal(s, d) {
         var path = `M ${s.y} ${s.x}
-          C ${(s.y + d.y) / 2} ${s.x},
-          ${(s.y + d.y) / 2} ${d.x},
+          C ${(s.y + d.y) / 2} ${d.x},
+          ${(s.y + d.y) / 2} ${s.x},
           ${d.y} ${d.x}`
-        return path
+        // var path2 = d3.path.lineTo(d.x, d.y);
+        return path;
       }
 
       // Toggle children on click.
