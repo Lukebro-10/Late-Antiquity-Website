@@ -7,25 +7,55 @@ import * as d3 from 'd3';
   templateUrl: 'rome_social.component.html'
 })
 export class RomeSocialComponent implements OnInit{
+
+  Constructor(){
+
+  }
   ngOnInit(){
+
     var treeData =
       {
-        "name": "Top Level",
+        "name": "Emperor",
         "value": 20,
         "children": [
+          { "name": "Consuls",
+          "value": 15,
+          "children": [
+            { "name": "Praetors",
+            "value": 10 }
+          ]
+        },
           {
-            "name": "Level 2: A",
-            "value": 10,
+            "name": "Senate",
+            "value": 15,
             "children": [
-              { "name": "Son of A",
-              "value": 5 },
-              { "name": "Daughter of A",
-              "value": 5 }
+              { "name": "Aediles",
+              "value": 10 },
+              { "name": "Quaestors",
+              "value": 10 },
+              { "name": "Censors",
+              "value": 10 }
             ]
           },
-          { "name": "Level 2: B",
-          "value": 10
-          }
+          { "name": "Tribunes",
+          "value": 15,
+          "children": [
+            { "name": "Comitia Tributa",
+            "value": 10,
+            "children": [
+              { "name": "Plebians",
+              "value": 5 }
+              ]
+            }
+          ]
+        },
+        { "name": "Legates/Proconsuls",
+        "value": 15,
+        "children": [
+          { "name": " comites",
+          "value": 10 }
+        ]
+      },
         ]
       };
 
@@ -222,6 +252,5 @@ export class RomeSocialComponent implements OnInit{
         update(d);
       }
     }
-
   }
 }
