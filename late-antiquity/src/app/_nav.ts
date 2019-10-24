@@ -161,6 +161,38 @@ export const navItems: NavData[] = [
   },
   {
     title: true,
+    name: 'Sassanid Persia'
+  },
+  {
+    name: 'Geography',
+    url: '/persia/geography',
+    icon: 'icon-drop'
+  },
+  {
+    name: 'Timeline',
+    url: '/persia/timeline',
+    icon: 'icon-drop'
+  },
+  {
+    name: 'Society and Culture',
+    url: '/persia/social',
+    icon: 'icon-drop'
+  },
+  {
+    name: 'Economy',
+    url: '/persia/economy',
+    icon: 'icon-drop'
+  },
+  {
+    name: 'Religion',
+    url: '/persia/religion',
+    icon: 'icon-drop'
+  },
+  {
+    divider: true
+  },
+  {
+    title: true,
     name: 'Barbarian Tribes'
   },
     {

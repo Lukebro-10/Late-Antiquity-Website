@@ -35,14 +35,17 @@ export class DefaultLayoutComponent implements OnDestroy, OnInit{
                 $("app-header").css("background-image", "linear-gradient(to right, #aaaaaa , #222222)");
                 $("app-sidebar").css("background-image", "linear-gradient(to bottom right, #aaaaaa , #222222)");
               }else if(this.router.url.includes('/rome_old')) {
-                $("app-header").css("background-image", "linear-gradient(to right, #ccaa44,  #222222)");
-                $("app-sidebar").css("background-image", "linear-gradient(to bottom right, #ccaa44, #222222)");
+                $("app-header").css("background-image", "linear-gradient(to right, #ee1111,  #ccaa44, #222222)");
+                $("app-sidebar").css("background-image", "linear-gradient(to bottom right, #ee1111, #ccaa44, #996600)");
               }else if(this.router.url.includes('/rome_west')) {
                 $("app-header").css("background-image", "linear-gradient(to right, #cc2222 , #222222)");
                 $("app-sidebar").css("background-image", "linear-gradient(to bottom right, #cc2222 , #222222)");
               }else if(this.router.url.includes('/rome_east')) {
                 $("app-header").css("background-image", "linear-gradient(to right, #cc22aa , #222222)");
                 $("app-sidebar").css("background-image", "linear-gradient(to bottom right, #cc22aa , #222222)");
+              }else if(this.router.url.includes('/persia')) {
+                $("app-header").css("background-image", "linear-gradient(to right, #ccaa44,  #222222)");
+                $("app-sidebar").css("background-image", "linear-gradient(to bottom right, #ccaa44, #222222)");
               }else {
                 $("app-header").css("background-background", "white");
                 $("app-sidebar").css("background-background", "white");

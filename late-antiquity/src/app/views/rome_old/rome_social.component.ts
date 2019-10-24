@@ -41,11 +41,7 @@ export class RomeSocialComponent implements OnInit{
           "value": 15,
           "children": [
             { "name": "Comitia Tributa",
-            "value": 10,
-            "children": [
-              { "name": "Plebians",
-              "value": 5 }
-              ]
+            "value": 10
             }
           ]
         },

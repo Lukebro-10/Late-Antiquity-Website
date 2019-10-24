@@ -43,10 +43,6 @@ export const routes: Routes = [
         loadChildren: () => import('./views/dashboard/dashboard.module').then(m => m.DashboardModule)
       },
       {
-        path: 'icons',
-        loadChildren: () => import('./views/icons/icons.module').then(m => m.IconsModule)
-      },
-      {
         path: 'notifications',
         loadChildren: () => import('./views/notifications/notifications.module').then(m => m.NotificationsModule)
       },
@@ -61,6 +57,10 @@ export const routes: Routes = [
       {
         path: 'rome_west',
         loadChildren: () => import('./views/rome_west/rw.module').then(m => m.RWModule)
+      },
+      {
+        path: 'persia',
+        loadChildren: () => import('./views/sassanid/persia.module').then(m => m.PersiaModule)
       },
     ]
   },
