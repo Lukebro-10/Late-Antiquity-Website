@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { ColorsComponent } from './colors.component';
 import { TimelineComponent } from './timeline.component';
 import { ReligionComponent } from './religion.component';
 import { SocialComponent } from './social.component';
