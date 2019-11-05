@@ -10,6 +10,64 @@
       h1 {
         text-shadow: -1px 0 1px black, 0 1px 1px black, 1px 0 1px black, 0 -1px 1px black;
       }
+
+      .art-pic {
+        border-radius: 20px;
+      }
+
+      .zoom {
+        transition: transform .2s; /* Animation */
+      }
+
+      .zoom:hover {
+        transform: scale(1.25); /* (125% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+      }
+
+      .popover__wrapper {
+        position: relative;
+        margin-top: 1.5rem;
+        display: inline-block;
+      }
+      .popover__content {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        transform: translate(0, 10px);
+        background-color: #eaeaea;
+        padding: 1.5rem;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+        width: auto;
+        border-radius: 5px;
+      }
+      .popover__content:before {
+        position: absolute;
+        z-index: -1;
+        content: "";
+        right: calc(50% - 10px);
+        top: -8px;
+        border-style: solid;
+        border-width: 0 10px 10px 10px;
+        border-color: transparent transparent #bfbfbf transparent;
+        transition-duration: 0.3s;
+        transition-property: transform;
+      }
+      .popover__wrapper:hover .popover__content {
+        z-index: 10;
+        opacity: 1;
+        visibility: visible;
+        transform: translate(0, -20px);
+        transition: all 0.5s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+      }
+      .popover__message {
+        text-align: center;
+      }
+
+      .culture-section {
+        background-size: cover;
+        width: 100%;
+        background-repeat: no-repeat;
+        margin-top:120px;
+      }
       </style>
 
   </head>
@@ -20,28 +78,31 @@
   <!-- <div class="site-wrap" id="home-section"> -->
 
     <div class="ftco-blocks-cover-1 align-items-center">
-      <div class="site-section-cover overlay" style="background-image: url('assets/img/Persia/Ctesiphon_Front.jpeg'); background-size: cover; width: 100%; background-repeat: no-repeat">
+      <div class="site-section-cover overlay culture-section" style="background-image: url('assets/img/Persia/Ctesiphon_Front.jpeg'); margin-top: 20px">
         <div class="container">
           <div class="row align-items-center justify-content-center">
             <div class="col-md-7 text-center">
               <h1 class="mb-4 text-white">Persian Governance</h1>
-              <p class="mb-4 text-white" style="text-shadow: -1px 0 1px black, 0 1px 1px black, 1px 0 1px black, 0 -1px 1px black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta veritatis in tenetur doloremque, maiores doloribus officia iste.<br>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta veritatis in tenetur doloremque, maiores doloribus officia iste. Dolores.<br>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta veritatis in tenetur doloremque, maiores doloribus officia iste. Dolores.<br>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta veritatis in tenetur doloremque, maiores doloribus officia iste. Dolores.</p>
+              <p class="mb-4 text-white" style="text-shadow: -1px 0 1px black, 0 1px 1px black, 1px 0 1px black, 0 -1px 1px black">
+                  In administering this empire, Sassanid rulers took the title of shahanshah (King of Kings), becoming the central overlords and also assumed guardianship of the sacred fire, the symbol of Zoroastrianism.Sassanid queens had the title of Banbishnan banbishn (Queen of Queens).<br>
+                  In normal times, the monarchical office was hereditary, but might be transferred by the king to a younger son; in two instances the supreme power was held by queens. When no direct heir was available, the nobles and prelates chose a ruler, but their choice was restricted to members of the royal family.<br>
+                  On a smaller scale, the territory might also be ruled by a number of petty rulers from a noble family, known as shahrdar, overseen directly by the shahanshah.
+              </p>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="site-section" style="margin-top:50px">
+    <div class="site-section culture-section" style="margin-top:50px">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-md-4">
-            <h2 class="h4 mb-4">More Info</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae voluptatem mollitia obcaecati quod maxime. Soluta libero eligendi voluptatum, natus debitis.<br>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, quasi!</p>
+            <h2 class="h4 mb-4">Provincial Planning</h2>
+            <p>The districts of the provinces were ruled by a shahrab and a mowbed (chief priest). The mowbed's job was to deal with estates and other things relating to legal matters. Sasanian rule was characterized by considerable centralization, ambitious urban planning, agricultural development, and technological improvements.<br>
+              Below the king, a powerful bureaucracy carried out much of the affairs of government; the head of the bureaucracy was the wuzurg framadar (vizier or prime minister).<br>
+              The priestly class of Zoroastrianism, the state religion, were also inextriably linked with political life and often figured prominently as advisors and leaders.
+            </p>
           </div>
           <div class="col-md-8">
             <img src="assets/img/Persia/Derbent.jpg" alt="Persian Fortress" class="img-fluid">
@@ -50,14 +111,21 @@
       </div>
     </div>
 
-    <div class="site-section-cover overlay" style="margin-top:50px; background-image: url('assets/img/Persia/Ctesiphon_Front.jpeg'); background-size: cover; width: 100%; background-repeat: no-repeat">
+    <div class="site-section-cover overlay culture-section" style="background-image: url('assets/img/Persia/sassanian.jpg');">
       <div class="container">
         <div class="row align-items-center justify-content-center">
           <div class="col-md-7 text-center">
             <h1 class="mb-4 text-white">Persian Class System</h1>
-            <p class="mb-4 text-white" style="text-shadow: -1px 0 1px black, 0 1px 1px black, 1px 0 1px black, 0 -1px 1px black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta veritatis in tenetur doloremque, maiores doloribus officia iste.<br>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta veritatis in tenetur doloremque, maiores doloribus officia iste. Dolores.<br>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta veritatis in tenetur doloremque, maiores doloribus officia iste. Dolores.</p>
+            <p class="mb-4 text-white" style="text-shadow: -2px 0 1px black, 0 2px 1px black, 2px 0 1px black, 0 -2px 1px black">Sassanid society was immensely complex, with separate systems of social organization governing numerous different groups within the empire. On the whole though it had considerable similarities to the caste system of India, with four primary social classes:<br>
+<br/>
+  Asronan (priests) <br>
+  Arteshtaran (warriors) <br>
+  Wastaryoshan (commoners) <br>
+  Hutukhshan (artisans) <br>
+<br/>
+At the center of the Sasanian caste system the shahanshah ruled over all the nobles. The royal princes, petty rulers, great landlords and priests, together constituted a privileged stratum, and were identified as wuzurgan, or grandees. This social system appears to have been fairly rigid, although rare exceptions could occur allowing an individual to change class depending on merit.
+<br>
+The Sassanid caste system would also carry a strong influence over into the early Islamic period. </p>
           </div>
         </div>
       </div>
@@ -67,25 +135,27 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-md-4">
-            <h2 class="h4 mb-4">More Info</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae voluptatem mollitia obcaecati quod maxime. Soluta libero eligendi voluptatum, natus debitis.<br>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, quasi!</p>
+            <h2 class="h4 mb-4">Slavery</h2>
+            <p>In general, mass slavery was never practiced by the Sassanids, but only as a system for houshold slaves or sometimes for debtors who had to use some of their time to serve in a fire-temple.<br>
+            Certain protections existed: harming a slave was considered a crime, and not even the king himself was allowed to do it. The master of a slave was allowed to free the person when he wanted to, which, no matter what faith the slave believed in, was considered a good deed. A slave could also be freed if his/her master died.<br>
+            Although in many ways this made being a slave almost preferable to living a life of a peasant, it came at the cost of personal autonomy. Although slaves could and did form families of their own, masters also were permitted to use female slaves to produce children.</p>
           </div>
           <div class="col-md-8">
-            <img src="assets/img/Persia/Naqsh-e_Rostam.jpg" alt="Map" class="img-fluid">
+            <img src="assets/img/Persia/Naqsh-e_Rostam.jpg" alt="Stone Carving" class="img-fluid">
           </div>
         </div>
       </div>
     </div>
 
-    <div class="site-section-cover overlay" style="margin-top:50px; background-image: url('assets/img/Persia/Bodleian.jpg'); background-size: cover; width: 100%; background-repeat: no-repeat">
+    <div class="site-section-cover overlay culture-section" style="background-image: url('assets/img/Persia/Bodleian.jpg');">
       <div class="container">
         <div class="row align-items-center justify-content-center">
           <div class="col-md-7 text-center">
             <h1 class="mb-4 text-white">Persian Language and Writing</h1>
-            <p class="mb-4 text-white" style="text-shadow: -1px 0 1px black, 0 1px 1px black, 1px 0 1px black, 0 -1px 1px black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta veritatis in tenetur doloremque, maiores doloribus officia iste.<br>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta veritatis in tenetur doloremque, maiores doloribus officia iste. Dolores.<br>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta veritatis in tenetur doloremque, maiores doloribus officia iste. Dolores.</p>
+            <p class="mb-4 text-white" style="text-shadow: -2px 0 1px black, 0 2px 1px black, 2px 0 1px black, 0 -2px 1px black">
+              During the early Sasanian period, Middle Persian along with Greek and Parthian appeared in the inscriptions of the early Sasanian kings. Quickly though Greek was phased out under the Sassanids, from both the efforts of the anti-Hellenic Zoroastrian clergy and also because Greek was commonplace among the Byzantines, the rivals of the Sassanids. Parthian soon disappeared as an administrative language too, but was continued to be spoken and written in the eastern part of the Sasanian Empire, the homeland of the Parthians.<br>
+              Aramaic, like in the Achaemenid Empire, was widely used in the Sasanian Empire, and provided scripts for Middle Persian and other languages.
+            </p>
           </div>
         </div>
       </div>
@@ -94,79 +164,165 @@
     <div class="site-section" style="margin-top:50px">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col-md-4">
-            <h2 class="h4 mb-4">More Info</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae voluptatem mollitia obcaecati quod maxime. Soluta libero eligendi voluptatum, natus debitis.<br>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, quasi!</p>
-          </div>
           <div class="col-md-8">
-            <img src="assets/img/Persia/persia-map.jpg" alt="Map" class="img-fluid">
+            <h2 class="h4 mb-8">Regional languages</h2>
+            <p>
+              Although Middle Persian was the native language of the Sasanians (who, however, were not originally from Pars), it was only a minority spoken-language in the vast Sasanian Empire. It became the administrative language of the empire, but it only formed the majority of Pars.
+              <br>
+              Besides Persian, Adhari along with one of its dialects, Tati, was spoken in Adurbadagan (Azerbaijan). Daylamite and Gilaki was spoken in Gilan, while Mazandarani (also known as Tabari) was spoken in Tabaristan.
+              In Khuzestan, several languages were spoken; Persian in the north and east, while Aramaic was spoken in the rest of the place. In Meshan, the Arameans, along with settled Arabs (known as Mesenian Arabs), and the nomadic Arabs, formed the Semitic population of the province along with Nabataean and Palmyrene merchants. Among them were Indian groups such as the Malays may also have been deported to Meshan, either as captives or recruited sailors. In Asoristan the majority of the people were Aramaic-speaking Nestorian Christians while the Persians, Jews and Arabs formed a minority in the province.
+              <br>
+              In the Caucasus, numerous languages were sproken including Georgian, various Kartvelian languages (notably in Lazica), Armenian, Caucasian Albanian, Scythian, Greek, and others were common.
+              Due to invasions from the Scythians and their sub-group, the Alans, into Azerbaijan, Armenia, and other places in the Caucasus, the places gained a larger, although small, Iranian population. Parthian, along with other Iranian dialects and languages was spoken in Khorasan, while to the further east in places which were not always controlled by the Sasanians, Sogdian, Bactrian and Khwarazmian was spoken. To the further south in Sistan, which saw an influx of Scythians during the Parthian period, Sistani was spoken. Kirman was populated by an Iranian group which closely resembled the Persians, while, farther to the east in Paratan, Turan and Makran, Balochi and non-Iranian languages were spoken.
+              <br>
+              In major cities such as Gundeshapur and Ctesiphon, Latin, Greek and Syriac were spoken by Roman/Byzantine prisoners of war. Furthermore, Slavic and Germanic were also spoken in the Sasanian Empire, once again due to the capture of Roman soldiers. Semitic languages including Himyaritic and Sabaean were spoken in Yemen.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <img src="assets/img/Persia/middle_persian.jpg" alt="Persian Alphabet" class="img-fluid">
           </div>
         </div>
       </div>
     </div>
 
-    <div class="site-section">
-          <div class="container">
+    <div class="site-section-cover overlay culture-section" style="background-image: url('assets/img/Persia/art-banner.jpg');">
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-md-7 text-center">
+            <h1 class="mb-4 text-white">Persian Art</h1>
+            <p class="mb-4 text-white" style="text-shadow: -2px 0 1px black, 0 2px 1px black, 2px 0 1px black, 0 -2px 1px black">
+              Although in many ways was built on Achaemenid traditions, the art of the Sassanids brought a wide array of influences together, including as far as China and the Mediterranean.
+              <br>
+              The surviving art of the Sassanids is best seen in its architecture, stone reliefs and metalwork, and there are some surviving paintings from what was evidently a widespread production. Numerous artifacts such as pottery and coins offer insight into styles of the time as well.
+              <br>
+              Although Parthian art preferred the front view, the narrative representations of the Sassanian art often features figures shown in the profile or a three-quarter view. Frontal views occur less frequently.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-            <div class="row mb-5">
-              <div class="col-md-7 mx-auto text-center">
-                <h2 class="heading-29190">Persian Art</h2>
-              </div>
-            </div>
+    <div class="site-section" style="margin-top:50px">
+          <div class="container">
 
             <div class="row">
               <div class="col-md-6 col-lg-4 mb-4">
-                <div class="item web">
-                  <a href="work-single.html" class="item-wrap" data-fancybox="gal">
-                    <span class="icon-add"></span>
-                    <img class="img-fluid" src="images/img_1.jpg" alt="image 1">
-                  </a>
+                <div class="item web popover__wrapper">
+                  <span class="icon-add"></span>
+                  <img class="img-fluid art-pic zoom" src="assets/img/Persia/Cameo_Shapur_Valerianus.jpg" alt="Sardonyx Cameo">
+                  <div class="popover__content">
+                    <p class="popover__message">A cameo made of sardonyx, thought to portray capturing of emperor Valerian by Shapur I.</p>
+                  </div>
                 </div>
               </div>
 
               <div class="col-md-6 col-lg-4 mb-4">
-                <div class="item web">
-                  <a href="work-single.html" class="item-wrap" data-fancybox="gal">
-                    <span class="icon-add"></span>
-                    <img class="img-fluid" src="images/img_1.jpg" alt="image 1">
-                  </a>
+                <div class="item web popover__wrapper">
+                  <span class="icon-add"></span>
+                  <img class="img-fluid art-pic zoom" src="assets/img/Persia/HormidziiCoin.jpg" alt="Coin">
+                  <div class="popover__content">
+                    <p class="popover__message">Coin of Hormizd II. Coins are a huge source of information in this period; for example the clear changes in crown design on different coins over time show that each monarch had their own unique crown, and some of them had several.</p>
+                  </div>
                 </div>
               </div>
 
               <div class="col-md-6 col-lg-4 mb-4">
-                <div class="item web">
-                  <a href="work-single.html" class="item-wrap" data-fancybox="gal">
-                    <span class="icon-add"></span>
-                    <img class="img-fluid" src="images/img_1.jpg" alt="image 1">
-                  </a>
+                <div class="item web popover__wrapper">
+                  <span class="icon-add"></span>
+                  <img class="img-fluid art-pic zoom" src="assets/img/Persia/Textile.jpg" alt="Textile">
+                  <div class="popover__content">
+                    <p class="popover__message">Sasanian silk twill textile of a simurgh in a beaded surround, 6th–7th century. Used in the reliquary of Saint Len, Paris</p>
+                  </div>
                 </div>
               </div>
 
               <div class="col-md-6 col-lg-4 mb-4">
-                <div class="item web">
-                  <a href="work-single.html" class="item-wrap" data-fancybox="gal">
-                    <span class="icon-add"></span>
-                    <img class="img-fluid" src="images/img_1.jpg" alt="image 1">
-                  </a>
+                <div class="item web popover__wrapper">
+                  <span class="icon-add"></span>
+                  <img class="img-fluid art-pic zoom" src="assets/img/Persia/Bishapur_Mosaic.jpg" alt="Mosaic">
+                  <div class="popover__content">
+                    <p class="popover__message">A mosaic from Bishapur. There was frequent cultural interchange between the Sassanids and other cultures, as shown in mosaics clearly influenced by those from Rome.</p>
+                  </div>
                 </div>
               </div>
 
               <div class="col-md-6 col-lg-4 mb-4">
-                <div class="item web">
-                  <a href="work-single.html" class="item-wrap" data-fancybox="gal">
-                    <span class="icon-add"></span>
-                    <img class="img-fluid" src="images/img_1.jpg" alt="image 1">
-                  </a>
+                <div class="item web popover__wrapper">
+                  <span class="icon-add"></span>
+                  <img class="img-fluid art-pic zoom" src="assets/img/Persia/gilded_dish.jpg" alt="Gilded Dish">
+                  <div class="popover__content">
+                    <p class="popover__message">Silver partly gilded dish with the favourite subject of the king hunting, 7th century</p>
+                  </div>
                 </div>
               </div>
 
               <div class="col-md-6 col-lg-4 mb-4">
-                <div class="item web">
-                  <a href="work-single.html" class="item-wrap" data-fancybox="gal">
-                    <span class="icon-add"></span>
-                    <img class="img-fluid" src="images/img_1.jpg" alt="image 1">
-                  </a>
+                <div class="item web popover__wrapper">
+                  <span class="icon-add"></span>
+                  <img class="img-fluid art-pic zoom" src="assets/img/Persia/Taq-e_Bostan_equestrian_statue.jpg" alt="Stone Relief">
+                  <div class="popover__content">
+                    <p class="popover__message">Rock relief of Khosrau II mounted on his horse Shabdiz, one of many such reliefs at the necropolis at Naqsh-e Rostam.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-4 mb-4">
+                <div class="item web popover__wrapper">
+                  <span class="icon-add"></span>
+                  <img class="img-fluid art-pic zoom" src="assets/img/Persia/Niasar_Fire_Temple.jpg" alt="Fire Temple">
+                  <div class="popover__content">
+                    <p class="popover__message">Niasar Fire Temple, a Zoroastrian place of worship. Generally there would be a number of other premises around fire temples where rituals and religious gatherings would take place.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-4 mb-4">
+                <div class="item web popover__wrapper">
+                  <span class="icon-add"></span>
+                  <img class="img-fluid art-pic zoom" src="assets/img/Persia/Falak-ol-Aflak_Castle.jpg" alt="Castle">
+                  <div class="popover__content">
+                    <p class="popover__message">Falak-ol-Aflak Castle, a Sassanid fortress constructed with a series of canals that act as a dehumidifier system.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-4 mb-4">
+                <div class="item web popover__wrapper">
+                  <span class="icon-add"></span>
+                  <img class="img-fluid art-pic zoom" src="assets/img/Persia/Qaledochtar.jpg" alt="Dome">
+                  <div class="popover__content">
+                    <p class="popover__message">Interior of the Qal'eh Dokhtar. The use of squinches to position the dome on top of a square structure is considered the most significant Sasanian contribution to the Islamic architecture.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-4 mb-4">
+                <div class="item web popover__wrapper">
+                  <span class="icon-add"></span>
+                  <img class="img-fluid art-pic zoom" src="assets/img/Persia/Bishapur.jpg" alt="Sassanid City">
+                  <div class="popover__content">
+                    <p class="popover__message">The ruins of Bishapur, a Sassanid city built in 266 AD by Shapur I.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-4 mb-4">
+                <div class="item web popover__wrapper">
+                  <span class="icon-add"></span>
+                  <img class="img-fluid art-pic zoom" src="assets/img/Persia/Ardeshir_Palace.jpg" alt="Ardeshir Palace">
+                  <div class="popover__content">
+                    <p class="popover__message">Palace of Ardeshir, founder of the Sassanid dynasty.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-4 mb-4">
+                <div class="item web popover__wrapper">
+                  <span class="icon-add"></span>
+                  <img class="img-fluid art-pic zoom" src="assets/img/Persia/Ctesiphon_palace_ruins.jpg" alt="Ctesiphon palace">
+                  <div class="popover__content">
+                    <p class="popover__message">Ctesiphon palace ruins. Known as the Tāq Kasrā, it is the only visible remaining structure of the Sassanid capital of Ctesiphon and is the largest single-span vault of unreinforced brickwork in the world. </p>
+                  </div>
                 </div>
               </div>
 
@@ -175,21 +331,6 @@
 
           </div>
         </div> <!-- END .site-section -->
-
-    <div class="site-section" style="margin-top:50px">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-4">
-            <h2 class="h4 mb-4">More Info</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae voluptatem mollitia obcaecati quod maxime. Soluta libero eligendi voluptatum, natus debitis.<br>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, quasi!</p>
-          </div>
-          <div class="col-md-8">
-            <img src="assets/img/Persia/persia-map.jpg" alt="Map" class="img-fluid">
-          </div>
-        </div>
-      </div>
-    </div>
 
       <div class="site-section" style="margin-top:20px">
         <div class="container">
